@@ -1,4 +1,11 @@
 const express = require("express");
+const {
+    COINBASE_API_KEY,
+    COINBASE_WEBHOOK_SECRET,
+    DOMAIN
+} = require('./config')
+
+console.log(COINBASE_API_KEY,COINBASE_WEBHOOK_SECRET,DOMAIN)
 
 const app = express();
 
