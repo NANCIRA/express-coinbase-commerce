@@ -16,7 +16,7 @@ app.get('/create-charge', (req, res) => {
 
     const chargeData = {
         name: 'Sound Effect',
-        description: 'An beautiful relax music sound effect',
+        description: 'A beautiful relax music sound effect',
         local_price: {
             amount: '0.2',
             currency: 'USD'
