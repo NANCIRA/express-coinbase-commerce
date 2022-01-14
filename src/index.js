@@ -18,11 +18,24 @@ app.get('/create-charge', (req, res) => {
         name: 'Sound Effect',
         description: 'An beautiful relax music sound effect',
         local_price: {
-            amount: ''
-        }
+            amount: '0.2',
+            currency: 'USD'
+        },
+        pricing_type: 'fixed_price',
+        metadata: {
+            customer_id: 'id_234',
+            customer_name: 'Rose Crill'
+        },
+        redirect_url: '${DOMAIN}/sucess-payment',
     }
+
+    Charge.create()
+
 })
-Charge.create()
+
+app.get('/sucess-payment', (req, res) => {
+    res.send('Payment successfull')
+})
 
 app.listen(4000);
 console.log("server on port", 4000);
